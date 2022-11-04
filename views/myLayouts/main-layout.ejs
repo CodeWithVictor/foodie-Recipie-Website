@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodie_recipe_website</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+  <div class="container">
+      <!-- header area -->
+      <nav class="navbar">
+        <div class="nav-brand">LOGO</div>
+        <div class="toggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <ul id="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/submitRecipe">Add New Recipes</a></li>
+            </ul>
+        </div>
+        <div id="searchFood">
+            <form action="/search" method="POST">
+                <input type="search" name="search" placeholder="search...">
+            </form>
+        </div>
+
+
+    </nav>
+    <!-- body -->
+    <%-body%>
+
+        <footer>
+            copy-right &copy; @webson 2021-2022 All right reserved
+        </footer>
+
+  </div>
+
+        <script src="/JS/main.js"></script>
+</body>
+
+</html>

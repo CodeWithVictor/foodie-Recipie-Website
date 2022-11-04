@@ -1,0 +1,39 @@
+<%if(details != ''){%>
+    <div class="details_header">
+        <h4><%=details.name%></h4>
+    </div>
+
+    <div class="details_body">
+
+        <div class="details_image">
+            <img src="/IMG_RECIPE/<%=details.image%>" alt="<%=details.name%>">
+        </div>
+        <div class="details_description">
+            <h4>cooking process</h4>
+            <p><%=details.description%></p>
+        </div>
+
+        <div class="details_ingredients">
+            <h4>Ingredients</h4>
+            <ul>
+                <%details.ingredient.forEach((ingredient)=>{%>
+                    <li>
+                        <%=ingredient%>
+                    </li>
+               <%})%>
+            </ul><br><br>
+            </div>
+            <a href="/editRecipe/<%=details._id%>">EDIT ME</a>
+
+            <!-- delete button form -->
+            <form action="/deleteRecipe/<%=details._id%>?_method=DELETE" method="post">
+                <button type="submit" id="delbtn">Delete Recipe</button>
+            </form><br><br>
+            <%}else{%>
+                <p>no content</p>
+            <%}%>
+        
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add recipe form</title>
+</head>
+<body>
+    <h3 class="submit_new">SUBMIT YOUR RECIPE</h3>
+    <div class="form-container">
+    <form action="/submitRecipe"  enctype="multipart/form-data" method="POST">
+      <!-- Name -->
+    <div class="row">
+      <div class="col-25">
+        <label for="recipeName">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="recipeName" name="recipeName" placeholder="Recipe name..">
+      </div>
+    </div>
+      <!-- Email -->
+    <div class="row">
+        <div class="col-25">
+            <label for="email">Email</label>
+          </div>  
+          <div class="col-75">
+            <input type="email" id="email" name="email" placeholder="Enter your email..">
+          </div>
+        </div>
+          <!-- Description -->
+        <div class="row">
+            <div class="col-25">
+              <label for="description">Description</label>
+            </div>
+            <div class="col-75">
+              <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+         <!-- Ingredients -->
+        <div class="row">
+            <div class="col-25">
+                <label for="ingredients">Ingredients</label>
+            </div>
+            <div class="col-75" id="ingredients_lists">
+                <div class="ingredientDiv">
+                    <input type="text" name="ingredients" placeholder="add one per time...">
+                </div>
+            </div>
+         </div>
+         <div class="row">
+            <button type="button" class="button" id="ingredients_btn">Add Ingredients</button>
+          </div>
+          <!-- category -->
+          <div class="row">
+            <div class="col-25">
+              <label for="category">Choose Category</label>
+            </div>
+            <div class="col-75">
+              <select id="category" name="category">
+                <option value="SOUP">Soup</option>
+                <option value="RICE">Rice</option>
+                <option value="BEANS">Beans</option>
+                <option value="PORRIDGE">Porridge</option>
+                <option value="SNACKS">Snacks</option>
+              </select>
+            </div>
+          </div>
+        <!-- Image -->
+        <div class="row">
+            <div class="col-25">
+            <label for="image">Add Image</label>
+            </div>
+            <div class="col-75">
+            <input type="file" id="image" name="image" placeholder="Upload recipe image.." accept="image/">
+            </div>
+        </div>
+        <div class="row">
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+  </div>
+</body>
+</html>
